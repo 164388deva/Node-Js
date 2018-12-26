@@ -1,6 +1,11 @@
+
 var fs = require('fs');
-var readline = require('readline-sync');
-fs.appendFile('mynewfile1.txt', name, function (err) {
-  if (err) throw err;
-  console.log('The file was saved!');
+
+var data =  process.argv[2];
+
+
+
+fs.writeFile('file.txt', data, function(err, data){
+    if (err) console.log(err);
+    console.log("Successfully Written to File.");
 });
